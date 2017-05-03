@@ -28,9 +28,11 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+
+import nongsa.agoto.MaintoOther.billing.billingactivity;
 import nongsa.agoto.R;
 import nongsa.agoto.loginandregistration.activity.setting.ImgUpload;
-import nongsa.agoto.loginandregistration.activity.Board;
+
 import nongsa.agoto.loginandregistration.app.AppConfig;
 import nongsa.agoto.loginandregistration.app.AppController;
 import nongsa.agoto.loginandregistration.helper.SQLiteHandler;
@@ -112,7 +114,8 @@ public class SettingActivity extends Activity {
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SettingActivity.this,billingactivity.class);
+                startActivity(intent);
             }
         });
         revise_setting.setOnClickListener(new View.OnClickListener() {
